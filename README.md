@@ -105,27 +105,25 @@ Administrators can:
 
 ## Project Structure
 
-```text
 My First Project/
 │
 ├── frontend/
-│   ├── HTML/
-│   ├── CSS/
-│   └── JS/
+│ ├── HTML/
+│ ├── CSS/
+│ └── JS/
 │
 ├── src/
-│   ├── controllers/
-│   ├── db/
-│   ├── middlewares/
-│   ├── models/
-│   ├── routes/
-│   └── utils/
+│ ├── controllers/
+│ ├── db/
+│ ├── middlewares/
+│ ├── models/
+│ ├── routes/
+│ └── utils/
 │
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
 └── README.md
-
 
 Authentication
 
@@ -139,12 +137,13 @@ API Base URL
 Local Development
 http://127.0.0.1:8000
 Running the Project Locally
+
 1. Clone the repository
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+   git clone <YOUR_GITHUB_REPOSITORY_URL>
 2. Go to the project directory
-cd helpdesk-ticket-system
+   cd helpdesk-ticket-system
 3. Install dependencies
-npm install
+   npm install
 4. Configure environment variables
 
 Create a .env file in the project root and add the required MongoDB and JWT configuration.
@@ -152,7 +151,7 @@ Create a .env file in the project root and add the required MongoDB and JWT conf
 Never upload the .env file to GitHub.
 
 5. Start the backend
-npm run dev
+   npm run dev
 6. Run the frontend
 
 Open the frontend using a local server such as VS Code Live Server.
@@ -183,4 +182,7 @@ Express.js backend development
 Frontend-backend communication
 Role-based access control
 Ticket management workflows
+
+```
+
 ```
