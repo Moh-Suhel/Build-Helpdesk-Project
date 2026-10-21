@@ -17,7 +17,7 @@ function TicketDetails() {
     async function getTicketDetails() {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/v1/users/ticket/${ticketId}`,
+          `https://build-helpdesk-project.onrender.com/api/v1/users/ticket/${ticketId}`,
           {
             method: "GET",
             credentials: "include",
@@ -46,7 +46,7 @@ function TicketDetails() {
   async function getComments() {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/v1/users/ticket/${ticketId}/comment`,
+        `https://build-helpdesk-project.onrender.com/api/v1/users/ticket/${ticketId}/comment`,
         {
           method: "GET",
           credentials: "include",
@@ -84,7 +84,7 @@ function TicketDetails() {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/v1/users/ticket/${ticketId}/comment`,
+        `https://build-helpdesk-project.onrender.com/api/v1/users/ticket/${ticketId}/comment`,
         {
           method: "POST",
           credentials: "include",
@@ -125,7 +125,7 @@ function TicketDetails() {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/v1/users/ticket/${ticketId}`,
+        `https://build-helpdesk-project.onrender.com/api/v1/users/ticket/${ticketId}`,
         {
           method: "DELETE",
           credentials: "include",

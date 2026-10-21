@@ -18,7 +18,7 @@ function CreateTicket() {
     async function getCurrentUser() {
       try {
         const response = await fetch(
-          "http://localhost:8000/api/v1/users/current-user",
+          "https://build-helpdesk-project.onrender.com/api/v1/users/current-user",
           {
             method: "GET",
             credentials: "include",
@@ -44,7 +44,7 @@ function CreateTicket() {
   async function handleLogout() {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/users/logout",
+        "https://build-helpdesk-project.onrender.com/api/v1/users/logout",
         {
           method: "POST",
           credentials: "include",
@@ -75,7 +75,7 @@ function CreateTicket() {
 
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/users/ticket",
+        "https://build-helpdesk-project.onrender.com/api/v1/users/ticket",
         {
           method: "POST",
           credentials: "include",

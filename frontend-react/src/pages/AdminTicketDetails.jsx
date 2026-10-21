@@ -37,7 +37,7 @@ function AdminTicketDetails() {
         setLoading(true);
 
         const response = await fetch(
-          `http://localhost:8000/api/v1/users/admin/tickets/${ticketId}`,
+          `https://build-helpdesk-project.onrender.com/api/v1/users/admin/tickets/${ticketId}`,
           {
             method: "GET",
             credentials: "include",
@@ -72,7 +72,7 @@ function AdminTicketDetails() {
     async function getAllUsers() {
       try {
         const response = await fetch(
-          "http://localhost:8000/api/v1/users/admin/users",
+          "https://build-helpdesk-project.onrender.com/api/v1/users/admin/users",
           {
             method: "GET",
             credentials: "include",
@@ -108,7 +108,7 @@ function AdminTicketDetails() {
       setMessage("");
 
       const response = await fetch(
-        `http://localhost:8000/api/v1/users/admin/tickets/${ticketId}/status`,
+        `https://build-helpdesk-project.onrender.com/api/v1/users/admin/tickets/${ticketId}/status`,
         {
           method: "PATCH",
           credentials: "include",
@@ -152,7 +152,7 @@ function AdminTicketDetails() {
       setMessage("");
 
       const response = await fetch(
-        `http://localhost:8000/api/v1/users/admin/tickets/${ticketId}/priority`,
+        `https://build-helpdesk-project.onrender.com/api/v1/users/admin/tickets/${ticketId}/priority`,
         {
           method: "PATCH",
           credentials: "include",
@@ -201,7 +201,7 @@ function AdminTicketDetails() {
       setMessage("");
 
       const response = await fetch(
-        `http://localhost:8000/api/v1/users/admin/tickets/${ticketId}/assign`,
+        `https://build-helpdesk-project.onrender.com/api/v1/users/admin/tickets/${ticketId}/assign`,
         {
           method: "PATCH",
           credentials: "include",

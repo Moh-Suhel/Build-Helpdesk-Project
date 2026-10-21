@@ -22,7 +22,7 @@ const [message , setMessage] = useState('')
           else{
             alert("all fields are filled")
 
-            const response = await fetch("http://localhost:8000/api/v1/users/register", {
+            const response = await fetch("https://build-helpdesk-project.onrender.com/api/v1/users/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

@@ -42,8 +42,8 @@ function AdminDashboard() {
       const queryString = queryParams.toString();
 
       const endpoint = queryString
-        ? `http://localhost:8000/api/v1/users/admin/tickets/filter?${queryString}`
-        : "http://localhost:8000/api/v1/users/admin/tickets";
+        ? `https://build-helpdesk-project.onrender.com/api/v1/users/admin/tickets/filter?${queryString}`
+        : "https://build-helpdesk-project.onrender.com/api/v1/users/admin/tickets";
 
       const response = await fetch(endpoint, {
         method: "GET",
@@ -95,7 +95,7 @@ function AdminDashboard() {
   async function handleLogout() {
     try {
       const response = await fetch(
-        "http://localhost:8000/api/v1/users/logout",
+        "https://build-helpdesk-project.onrender.com/api/v1/users/logout",
         {
           method: "POST",
           credentials: "include",

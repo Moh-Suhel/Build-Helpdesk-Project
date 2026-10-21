@@ -17,7 +17,7 @@ function UpdateTicket() {
     async function getTicketDetails() {
       try {
         const response = await fetch(
-          `http://localhost:8000/api/v1/users/ticket/${ticketId}`,
+          `https://build-helpdesk-project.onrender.com/api/v1/users/ticket/${ticketId}`,
           {
             method: "GET",
             credentials: "include",
@@ -52,7 +52,7 @@ function UpdateTicket() {
 
     try {
       const response = await fetch(
-        `http://localhost:8000/api/v1/users/ticket/${ticketId}`,
+        `https://build-helpdesk-project.onrender.com/api/v1/users/ticket/${ticketId}`,
         {
           method: "PATCH",
           credentials: "include",

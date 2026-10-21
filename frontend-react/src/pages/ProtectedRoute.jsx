@@ -8,7 +8,7 @@ function ProtectedRoute({ children }) {
     async function checkAuth() {
       try {
         const response = await fetch(
-          "http://localhost:8000/api/v1/users/current-user",
+          "https://build-helpdesk-project.onrender.com/api/v1/users/current-user",
           {
             method: "GET",
             credentials: "include",

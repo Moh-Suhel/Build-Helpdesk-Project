@@ -9,7 +9,7 @@ async function handleLogout() {
   console.log("Logout button clicked!");
   try {
     const response = await fetch(
-      "http://localhost:8000/api/v1/users/logout",
+      "https://build-helpdesk-project.onrender.com/api/v1/users/logout",
       {
         method: "POST",
         credentials: "include",
@@ -35,7 +35,7 @@ async function handleLogout() {
     async function getMyTickets() {
       try {
         const response = await fetch(
-          "http://localhost:8000/api/v1/users/myticket",
+          "https://build-helpdesk-project.onrender.com/api/v1/users/myticket",
           {
             method: "GET",
             credentials: "include",
