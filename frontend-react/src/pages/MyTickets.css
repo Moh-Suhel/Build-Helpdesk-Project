@@ -1,0 +1,167 @@
+/* ===== Global Styles ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fb;
+  color: #1f2937;
+}
+
+/* ===== Header ===== */
+header {
+  width: 100%;
+  min-height: 75px;
+  padding: 0 6%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+header h2 {
+  margin: 0;
+  color: #2563eb;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* ===== Navigation ===== */
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+header nav a {
+  color: #374151;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
+  color: #2563eb;
+}
+
+/* ===== Logout Button ===== */
+header nav button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 7px;
+  background-color: #ef4444;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+header nav button:hover {
+  background-color: #dc2626;
+}
+
+/* ===== Main Container ===== */
+.my-tickets-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 45px auto;
+  padding: 30px;
+}
+
+/* ===== Page Heading ===== */
+.my-tickets-container > h1 {
+  margin: 0 0 10px;
+  color: #111827;
+  font-size: 32px;
+}
+
+.my-tickets-container > p {
+  margin: 0 0 25px;
+  color: #6b7280;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ===== Ticket List ===== */
+.ticket-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* ===== Individual Ticket Card ===== */
+.ticket-card {
+  padding: 25px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ticket-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Ticket Title ===== */
+.ticket-card h2 {
+  margin: 0 0 15px;
+  color: #1d4ed8;
+  font-size: 22px;
+  overflow-wrap: anywhere;
+}
+
+/* ===== Ticket Information ===== */
+.ticket-card p {
+  margin: 10px 0;
+  color: #4b5563;
+  font-size: 15px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.ticket-card p strong {
+  color: #1f2937;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 600px) {
+  header {
+    padding: 18px 5%;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  header nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .my-tickets-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .my-tickets-container > h1 {
+    font-size: 27px;
+  }
+
+  .ticket-card {
+    padding: 18px;
+  }
+
+  .ticket-card h2 {
+    font-size: 20px;
+  }
+}

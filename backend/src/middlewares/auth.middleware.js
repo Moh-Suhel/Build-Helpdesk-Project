@@ -22,7 +22,7 @@ const VerifyUser =  AsyncHandler( async (req, res, next) => {
    }
    const user = await User.findById(findId)
 
-   if(!User){
+   if(!user){
     throw new ApiError(500, "could not get user id")
    }
    req.user = user

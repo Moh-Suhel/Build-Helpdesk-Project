@@ -6,7 +6,7 @@ import { router } from "./routes/user.routes.js"
 const app = express()
 
 app.use(cors({
-    origin: "https://roaring-choux-fac925.netlify.app",
+   origin: 'http://localhost:5173',
     credentials: true
 }))
 
@@ -19,5 +19,15 @@ app.use(cookieparser())
 
 
 app.use("/api/v1/users", router)
+
+app.use((err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
+
+    res.status(statusCode).json({
+        success: false,
+        message: err.message || "Something went wrong",
+        errors: err.errors || []
+    });
+});
 
 export {app}

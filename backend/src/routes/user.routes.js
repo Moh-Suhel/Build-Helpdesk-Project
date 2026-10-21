@@ -29,7 +29,7 @@ router.route("/register").post(
 )
 
 router.route("/login").post(loginUser)
-router.route("/ticket").post(VerifyUser , ticketUser)
+router.route("/ticket").post(VerifyUser , ticketUser) 
 router.route("/myticket").get(VerifyUser, getMyTickets)
 router.route("/ticket/:ticketId").get(VerifyUser, getTicketById)
 router.route("/ticket/:ticketId").patch( VerifyUser, Update)

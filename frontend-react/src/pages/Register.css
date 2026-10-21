@@ -1,0 +1,134 @@
+/* Main page layout */
+.perent {
+  min-height: 85vh;
+  margin: 20px;
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background: linear-gradient(135deg, #d9f5c5, #c5e8b4);
+  border-radius: 35px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Left side content */
+.register-hero {
+  flex: 1;
+  max-width: 650px;
+}
+
+.register-hero h1 {
+  font-size: 56px;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  color: #111;
+}
+
+.register-hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Right side registration card */
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.register-card h1 {
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  color: #111;
+}
+
+/* Form layout */
+.register-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.register-card label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.register-card input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.register-card input:focus {
+  border-color: #4b9b64;
+  box-shadow: 0 0 0 3px rgba(75, 155, 100, 0.12);
+}
+
+/* Register button */
+.register-card button {
+  margin-top: 12px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: #278447;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.register-card button:hover {
+  background-color: #1d6937;
+}
+
+/* Success message */
+.register-card p {
+  line-height: 1.5;
+}
+
+.register-card form + p {
+  color: #218443;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+  .perent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 35px;
+    margin: 12px;
+    padding: 30px 20px;
+    border-radius: 24px;
+  }
+
+  .register-hero h1 {
+    font-size: 38px;
+  }
+
+  .register-hero p {
+    font-size: 16px;
+  }
+
+  .register-card {
+    max-width: 100%;
+    padding: 25px;
+  }
+}

@@ -1,0 +1,64 @@
+.update-ticket-container {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.update-ticket-container h1 {
+  text-align: center;
+  color: #2563eb;
+  margin-bottom: 25px;
+}
+
+.update-ticket-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: white;
+  padding: 25px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.update-ticket-container label {
+  font-weight: bold;
+  color: #374151;
+}
+
+.update-ticket-container input,
+.update-ticket-container textarea,
+.update-ticket-container select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.update-ticket-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.update-ticket-container button {
+  margin-top: 12px;
+  padding: 13px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.update-ticket-container button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.update-ticket-container button:hover:not(:disabled) {
+  background: #1d4ed8;
+}

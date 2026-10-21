@@ -1,0 +1,193 @@
+.ticket-details-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.ticket-details-container h1 {
+  text-align: center;
+  color: #1d4ed8;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.ticket-details-container > p {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+}
+
+.ticket-details-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ticket-details-card h2 {
+  color: #2563eb;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 25px;
+  overflow-wrap: anywhere;
+}
+
+.ticket-details-card p {
+  color: #374151;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+  overflow-wrap: anywhere;
+}
+
+.ticket-details-card strong {
+  color: #111827;
+}
+
+@media (max-width: 600px) {
+  .ticket-details-container {
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .ticket-details-container h1 {
+    font-size: 26px;
+  }
+
+  .ticket-details-card {
+    padding: 20px;
+  }
+
+  .ticket-details-card h2 {
+    font-size: 22px;
+  }
+
+  .ticket-details-card p {
+    font-size: 15px;
+  }
+}
+
+
+.ticket-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.update-ticket-btn,
+.delete-ticket-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.update-ticket-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.update-ticket-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-ticket-btn {
+  background-color: #dc2626;
+  color: white;
+}
+
+.delete-ticket-btn:hover {
+  background-color: #b91c1c;
+}
+
+@media (max-width: 480px) {
+  .ticket-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .update-ticket-btn,
+  .delete-ticket-btn {
+    text-align: center;
+  }
+}
+
+.comments-section {
+  max-width: 800px;
+  margin: 35px auto;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.comments-section h2 {
+  color: #2563eb;
+  font-size: 26px;
+  margin-bottom: 22px;
+}
+
+.comments-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+}
+
+.comments-section textarea {
+  width: 100%;
+  min-height: 110px;
+  box-sizing: border-box;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  resize: vertical;
+}
+
+.comments-section textarea:focus {
+  outline: 2px solid #93c5fd;
+  border-color: #2563eb;
+}
+
+.comments-section button {
+  align-self: flex-start;
+  padding: 12px 22px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.comments-section button:hover {
+  background: #1d4ed8;
+}
+
+.comment-card {
+  margin-top: 18px;
+  padding: 18px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow-wrap: anywhere;
+}
+
+.comment-card p {
+  line-height: 1.6;
+  margin: 8px 0;
+}

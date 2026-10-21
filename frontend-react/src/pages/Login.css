@@ -1,0 +1,114 @@
+/* Main page background */
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #d9f7c8, #b7e8a5);
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+/* Login card */
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Heading */
+.login-card h1 {
+  text-align: center;
+  font-size: 32px;
+  color: #171717;
+  margin: 0 0 12px;
+}
+
+/* Description */
+.login-card > p {
+  text-align: center;
+  color: #666666;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+/* Form labels */
+.login-card label {
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+}
+
+/* Input fields */
+.login-card input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Input focus effect */
+.login-card input:focus {
+  border-color: #278448;
+  box-shadow: 0 0 0 3px rgba(39, 132, 72, 0.12);
+}
+
+/* Login button */
+.login-card button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 28px;
+  background-color: #278448;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+.login-card button:hover {
+  background-color: #1d6937;
+  transform: translateY(-2px);
+}
+
+/* Message */
+.login-card form p {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* Mobile responsive design */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px 15px;
+  }
+
+  .login-card {
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .login-card h1 {
+    font-size: 28px;
+  }
+
+  .login-card input {
+    padding: 13px;
+  }
+}

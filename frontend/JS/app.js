@@ -10,7 +10,7 @@ if (form){
     const fullName = form.querySelector('[name="fullName"]').value
     const password = form.querySelector('[name="password"]').value
 
-    const response = await fetch("https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/register", {
+    const response = await fetch("http://127.0.0.1:8000/api/v1/users/register", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -44,7 +44,7 @@ if (loginForm) {
         const email = loginForm.querySelector('[name="email"]').value;
         const password = loginForm.querySelector('[name="password"]').value;
 
-        const response = await fetch("https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/login", {
+        const response = await fetch("http://127.0.0.1:8000/api/v1/users/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -62,7 +62,7 @@ if (loginForm) {
         console.log(data);
 
         if (response.ok) {
-    window.location.href = "dashboard.html";
+   window.location.href = "HTML/dashboard.html";
 }
     });
 }
@@ -83,7 +83,7 @@ if (ticketForm) {
         const priority = ticketForm.querySelector('[name="priority"]').value;
 
         const response = await fetch(
-            "https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/ticket",
+            "http://127.0.0.1:8000/api/v1/users/ticket",
             {
                 method: "POST",
                 headers: {
@@ -111,7 +111,7 @@ if (ticketForm) {
 
 
 
-// jis position pe ticket mongo dp se aaker seen hote hai 
+// jis position pe ticket mongo db  se aaker seen hote hai 
 const ticketsContainer = document.querySelector("#ticketsContainer");
 
 if (ticketsContainer) {
@@ -121,7 +121,7 @@ if (ticketsContainer) {
 async function getMyTickets() {
 
     const response = await fetch(
-         "https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/myticket",
+         "http://127.0.0.1:8000/api/v1/users/myticket",
         {
             method: "GET",
             credentials: "include"
@@ -199,7 +199,7 @@ async function getTicketDetails() {
     const ticketId = params.get("id");
 
     const response = await fetch(
-        `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/ticket/${ticketId}`,
+        `http://127.0.0.1:8000/api/v1/users/ticket/${ticketId}`,
         {
             method: "GET",
             credentials: "include"
@@ -259,7 +259,7 @@ if (updateTicketForm) {
 
 
         const response = await fetch(
-            `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/ticket/${ticketId}`,
+            `http://127.0.0.1:8000/api/v1/users/ticket/${ticketId}`,
             {
                 method: "PATCH",
 
@@ -303,7 +303,7 @@ async function getTicketForUpdate() {
 
 
     const response = await fetch(
-        `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/ticket/${ticketId}`,
+        `http://127.0.0.1:8000/api/v1/users/ticket/${ticketId}`,
         {
             method: "GET",
 
@@ -357,7 +357,7 @@ if (deleteTicketBtn) {
         }
 
         const response = await fetch(
-            `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/ticket/${ticketId}`,
+            `http://127.0.0.1:8000/api/v1/users/ticket/${ticketId}`,
             {
                 method: "DELETE",
                 credentials: "include"
@@ -391,7 +391,7 @@ if (commentForm) {
         const message = document.querySelector("#commentMessage").value;
 
         const response = await fetch(
-            `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/ticket/${ticketId}/comment`,
+            `http://127.0.0.1:8000/api/v1/users/ticket/${ticketId}/comment`,
             {
                 method: "POST",
                 headers: {
@@ -414,7 +414,7 @@ if (commentForm) {
     commentForm.reset();
 
     const userResponse = await fetch(
-        "https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/current-user",
+        "http://127.0.0.1:8000/api/v1/users/current-user",
         {
             method: "GET",
             credentials: "include"
@@ -446,7 +446,7 @@ if (commentsContainer) {
 
 async function getComments(ticketId) {
     const response = await fetch(
-        `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/ticket/${ticketId}/comment`,
+        `http://127.0.0.1:8000/api/v1/users/ticket/${ticketId}/comment`,
         {
             method: "GET",
             credentials: "include"
@@ -534,7 +534,7 @@ if (priority) queryParams.set("priority", priority);
 if (category) queryParams.set("category", category);
 
 const response = await fetch(
-    `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/admin/tickets/filter?${queryParams.toString()}`,
+    `http://127.0.0.1:8000/api/v1/users/admin/tickets/filter?${queryParams.toString()}`,
     {
         method: "GET",
         credentials: "include"
@@ -668,7 +668,7 @@ if (logoutBtn) {
     logoutBtn.addEventListener("click", async () => {
 
         const response = await fetch(
-            "https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/logout",
+            "http://127.0.0.1:8000/api/v1/users/logout",
             {
                 method: "POST",
                 credentials: "include"
@@ -712,7 +712,7 @@ if (adminTicketDetails) {
             try {
 
                 const response = await fetch(
-                    `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/admin/tickets/${ticketId}`,
+                    `http://127.0.0.1:8000/api/v1/users/admin/tickets/${ticketId}`,
                     {
                         method: "GET",
                         credentials: "include"
@@ -812,7 +812,7 @@ if (adminStatusForm) {
             try {
 
                 const response = await fetch(
-                    `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/admin/tickets/${ticketId}/status`,
+                    `http://127.0.0.1:8000/api/v1/users/admin/tickets/${ticketId}/status`,
                     {
                         method: "PATCH",
 
@@ -882,7 +882,7 @@ if (adminPriorityForm) {
 
         try {
             const response = await fetch(
-                `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/admin/tickets/${ticketId}/priority`,
+                `http://127.0.0.1:8000/api/v1/users/admin/tickets/${ticketId}/priority`,
                 {
                     method: "PATCH",
                     headers: {
@@ -930,7 +930,7 @@ if (adminAssignmentForm) {
         try {
 
             const response = await fetch(
-                "https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/admin/users",
+                "http://127.0.0.1:8000/api/v1/users/admin/users",
                 {
                     method: "GET",
                     credentials: "include"
@@ -1000,7 +1000,7 @@ if (adminAssignmentForm) {
             try {
 
                 const response = await fetch(
-                    `https://helpdesk-ticket-system-a7ux.onrender.com/api/v1/users/admin/tickets/${ticketId}/assign`,
+                    `http://127.0.0.1:8000/api/v1/users/admin/tickets/${ticketId}/assign`,
                     {
                         method: "PATCH",
 

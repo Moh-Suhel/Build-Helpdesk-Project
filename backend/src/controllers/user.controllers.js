@@ -9,8 +9,8 @@ const generateAccessTokenAndRefreshToken = async(userId) => {
     const user = await User.findById(userId)
    const AccessToken =  user.generateAccessToken()
    const RefreshToken = user.generateRefreshToken()
-   console.log("AccessToken" , AccessToken )
-   console.log("RefreshToken" , RefreshToken )
+//    console.log("AccessToken" , AccessToken )  TALHA BHAI
+//    console.log("RefreshToken" , RefreshToken )
 
    user.refreshToken = RefreshToken
     await user.save()
@@ -26,7 +26,7 @@ const generateAccessTokenAndRefreshToken = async(userId) => {
 
 const registerUser = AsyncHandler(async(req , res) => {
  const {username, email, password, fullName} = req.body
-console.log("body" ,req.body)
+// console.log("body" ,req.body) TALHA BHAI 
  if (!username || !email || !password) {
     throw new ApiError(400, "All field are required") 
  }
@@ -48,7 +48,7 @@ console.log("body" ,req.body)
     password,
     fullName
  })
- console.log("Usercreater", user)
+//  console.log("Usercreater", user)
 
  const createdUser = await User.findById(user._id).select(
    "-password   -refreshToken"
@@ -92,8 +92,8 @@ const loginUser = AsyncHandler(async(req, res) => {
 
     const options = {
         httpOnly: true,
-        secure: true,
-        sameSite: "none"
+        secure: false,
+        sameSite: "lax"
         
         
     }
@@ -160,6 +160,7 @@ const getCurrentUser = AsyncHandler(async (req, res) => {
         )
     );
 });
+
 
 
 
