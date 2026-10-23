@@ -76,6 +76,7 @@ console.log(data);
                      value={username}
                        onChange={(e) => setUsername(e.target.value)}
                         /> 
+                        <p>Current username: {username}</p>
               <label htmlFor="email" >email</label>
             <input type = "email"   id="email" name = "email"  placeholder="enter your email"  value={email}   onChange={(e) => setEmail(e.target.value)}/> 
               <label htmlFor="fullname" >fullname</label>
